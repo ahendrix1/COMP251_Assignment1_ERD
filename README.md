@@ -2,6 +2,7 @@
 **PROPERTY**
 **AMENITY**
 **RENTER**
+**CLASS**
 **AGENT**
 **OFFER**
 **PACKAGE**
@@ -37,6 +38,7 @@
     * prop_longdesc
     * prop_location
     * prop_range
+    * prop_sqrft
 ### **AMENITY**
     * amen_id
     * amen_name
@@ -48,6 +50,10 @@
     * renter_email
     * renter_phone
     * renter_range
+### **CLASS**
+    * class_title
+    * class_desc
+    * class_id
 ### **AGENT**
     * agent_id
     * agent_status
@@ -64,8 +70,17 @@
     * agent_id
 ### **PROP_CLASS_LIST**
     * prop_id
-    * 
+    * class_id
 ### **RENTER_AMEN_LIST**
+    * renter_id
+    * amen_id
 ### **RENTER_PROP_LIST**
+    * renter_id
+    * prop_id
 ### **RENTER_CLASS_LIST**
+    * renter_id
+    * class_id
 ### **AGENT_PACKAGE_LIST**
+    * agent_id
+    * pkg_id
+    * pkg_period
