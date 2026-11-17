@@ -16,13 +16,13 @@
 
 ### Associative Entities
 
-**PROP_AMEN_LIST** - A PROP_AMEN has exactly one PROPERTY associated with it and any number of AMENITIES associated with it. They are weak entities, identified uniquely by prop_id.
+**PROP_AMEN_LIST** - A PROP_AMEN has exactly one PROPERTY associated with it and exactly one AMENITY associated with it. They are weak entities, identified uniquely by prop_id and amen_id.
 
-**PROP_AGENT_LIST** - A PROP_AGENT has exactly one PROPERTY associated with it and any number of AGENTS associated with it. They are weak entities, identified by prop_id.
+**PROP_AGENT_LIST** - A PROP_AGENT has exactly one PROPERTY associated with it and exactly one AGENTS associated with it. They are weak entities, identified by prop_id and agent_id.
 
-**RENTER_AMEN_LIST** - A RENTER_AMEN has exactly one RENTER associated with it and any number of AMENITIES associated with it. They are weak entities, identified by renter_id
+**RENTER_AMEN_LIST** - A RENTER_AMEN has exactly one RENTER associated with it and exactly one AMENITY associated with it. They are weak entities, identified by renter_id and amen_id.
 
-**RENTER_PROP_LIST** - A RENTER_PROP has exactly one RENTER associated with it and any number of PROPERTIES associated with it. They are weak entities, identified by renter_id
+**RENTER_PROP_LIST** - A RENTER_PROP has exactly one RENTER associated with it and exactly one PROPERTY associated with it. They are weak entities, identified by renter_id and prop_id
 
 **AGENT_PACKAGE_LIST** - A AGENT_PACKAGE has exactly one AGENT and exactly one PACKAGE associated with it. They are weak entities, identified by agent_id. Additionally, they record the pkg_period.
 
@@ -39,9 +39,9 @@ A **RENTER** <ins>picks</ins> zero, one, or multiple **AMENITIES**, **AMENITIES*
 
 A **RENTER** <ins>has</ins> zero, one, or multiple **OFFERS**, **OFFERS** are made to exactly one **RENTER**.
 
-A **CLASS** <ins>classifies</ins> one, or multiple **RENTER**, a **RENTER** has exactly one **CLASS**
+A **CLASS** <ins>classifies</ins> one or multiple **RENTER**, a **RENTER** has exactly one **CLASS**
 
-A **CLASS** <ins>classifies</ins> zero, one, or multiple **PROPERTY**, a **PROPERTY** has exactly one **CLASS**.
+A **CLASS** <ins>classifies</ins> one or multiple **PROPERTY**, a **PROPERTY** has exactly one **CLASS**.
 
 An **AGENT** <ins>lists</ins> zero, one, or multiple **PROPERTIES**, **PROPERTIES** are listed by zero, one, or multiple **AGENTS**.
 
@@ -50,13 +50,13 @@ An **AGENT** <ins>makes</ins> zero, one, or multiple **OFFERS**, **OFFERS** are 
 An **AGENT** <ins>has</ins> exactly one **PACKAGE**, a **PACKAGE** is had by zero, one, or multiple **AGENTS**.
 
 
-A **PROPERTY** has exactly one **PROP_AMEN_LIST**, which has zero, one, or multiple **AMENITIES**.
+A **PROPERTY** has zero, one, or multiple **PROP_AMEN_LIST**, which is had by zero, one, or multiple **AMENITIES**.
 
-A **PROPERTY** has exactly one **PROP_AGENT_LIST**, which has zero, one, or multiple **AGENTS**.
+A **PROPERTY** has zero, one, or multiple **PROP_AGENT_LIST**, which is had by zero, one, or multiple **AGENTS**.
 
-A **RENTER** has exactly one **RENTER_PROP_LIST**, which has zero, one, or multiple **PROPERTIES**.
+A **RENTER** has zero, one, or multiple **RENTER_PROP_LIST**, which is had by zero, one, or multiple **PROPERTIES**.
 
-A **RENTER** has exactly one **RENTER_AMEN_LIST**, which has zero, one, or multiple **AMENITIES**.
+A **RENTER** has zero, one, or multiple **RENTER_AMEN_LIST**, which has zero, one, or multiple **AMENITIES**.
 
 A **AGENT** has exactly one **AGENT_PACKAGE_LIST**, which has exactly one **PACKAGE**.
 
@@ -75,3 +75,4 @@ A **AGENT** has exactly one **AGENT_PACKAGE_LIST**, which has exactly one **PACK
 * Do **RENTERS** have associated locations or addresses? - NO, they are people.
 
 * Can an **AGENT** have more than one **PACKAGE**? - NO, agent accounts can only have one package.
+
