@@ -1,8 +1,10 @@
+<img width="996" height="589" alt="image" src="https://github.com/user-attachments/assets/e7e7b8d1-d33f-4a0c-a521-ad33f94ed029" />
 ## Entities
 
 **PROPERTY** - A PROPERTY has any number of AMENITIES, can be picked by any number of RENTERS, and listed by any number of AGENTS. Each PROPERTY is exactly one CLASS. Any number of OFFERS can be made on the PROPERTY. Each property is identified by prop_id.
 
 **AMENITY** - An AMENITY is had by any number of PROPERTIES, and can be picked by any number of RENTERS. An AMENITY is uniquely identified by its amen_id.
+
 
 **RENTER** - A RENTER can pick any number of PROPERTIES and AMENITIES, and is exactly one CLASS. A RENTER can have any number of OFFERS made to them. Each renter is uniquely identified by renter_id. 
 
