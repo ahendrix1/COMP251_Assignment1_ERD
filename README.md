@@ -1,4 +1,5 @@
-<img width="996" height="589" alt="image" src="https://github.com/user-attachments/assets/e7e7b8d1-d33f-4a0c-a521-ad33f94ed029" />
+<img width="1055" height="633" alt="image" src="https://github.com/user-attachments/assets/c2d6ec5f-f61f-4625-a3f7-6e75acab1ec1" />
+
 ## Entities
 
 **PROPERTY** - A PROPERTY has any number of AMENITIES, can be picked by any number of RENTERS, and listed by any number of AGENTS. Each PROPERTY is exactly one CLASS. Any number of OFFERS can be made on the PROPERTY. Each property is identified by prop_id.
